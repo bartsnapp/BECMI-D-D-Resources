@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{moresize}
+\usepackage{wasysym}
+
+\usepackage{tabularx}
+
+\usepackage{graphicx}
+
+\input Konanur.fd
+\newcommand*\hpfamily{\usefont{U}{Konanur}{xl}{n}}
+
+\input AnnSton.fd
+\newcommand*\acfamily{\usefont{U}{AnnSton}{xl}{n}}
+
+
+\usepackage[landscape]{geometry}
+\usepackage[cm]{fullpage}
+
+\usepackage{imfellEnglish}
+\usepackage[T1]{fontenc}
+
+\setlength{\arrayrulewidth}{2pt}
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.5}
+
+\setlength{\fboxrule}{2pt}
+\setlength{\fboxsep}{2pt}
+\makeatletter
+\def\hrulefill{\leavevmode\leaders\hrule height 2pt\hfill\kern\z@}
+\makeatother
+
+\newcommand{\ability}[1]{\fbox{\raisebox{-.3ex}{\resizebox{1.25in}{.4in}{#1}}\rule{1in}{0pt}\resizebox{!}{.4in}{(}\rule{.5in}{0pt}\resizebox{!}{.4in}{)}}}
+
+\newcommand{\savingThrow}[1]{$\underset{\begin{minipage}{1.25in}\Large \center #1 \end{minipage}}{\resizebox{1in}{!}{\fullmoon}}$}
+
+
+\begin{document}
+\flushleft\HUGE\pagenumbering{gobble}
+\begin{minipage}[b][2in][t]{.57\textwidth}
+
+  \vspace*{1.8cm}
+  
+  \rule{\textwidth}{2pt}\\[-1.2ex]
+  {\huge Name}
+
+   \vfill
+  \rule{.7\textwidth}{2pt}\hfill \rule{.2\textwidth}{2pt}\\[-1.2ex]
+  {\huge Class  \hspace{.68\textwidth}Level}
+\end{minipage}
+\hfill
+\begin{minipage}[b][2in][t]{.4\textwidth}
+\flushright\fbox{\resizebox{2in}{!}{\hpfamily HP}\rule{1.5in}{0pt}}\\
+\fbox{\resizebox{2in}{!}{\acfamily AC}\rule{1.5in}{0pt}}
+\end{minipage}
+
+\vfill
+
+
+\ability{STR}\hfill
+\ability{INT}\hfill
+\ability{WIS}
+
+\vspace{.15in}
+
+\ability{DEX}\hfill
+\ability{CON}\hfill
+\ability{CHA}
+
+\vfill
+
+\savingThrow{Poison or Death Ray}\hfill
+\savingThrow{Magic Wand}\hfill
+\savingThrow{Turn to Stone \\ or Paralysis}\hfill
+\savingThrow{Dragon Breath}\hfill
+\savingThrow{Spells or \\ Magic Staff}
+
+\begin{tabular*}{\textwidth}{|l @{\extracolsep{\fill}} @{\extracolsep{\fill}}|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \multicolumn{1}{l}{THAC} & \multicolumn{1}{c}{9} & \multicolumn{1}{c}{8} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{-1} & \multicolumn{1}{c}{-2} \\ \hline
+  Roll & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \\ \hline
+\end{tabular*}
+
+\end{document}
