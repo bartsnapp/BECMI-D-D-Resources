@@ -1,7 +1,9 @@
 \documentclass{article}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
 \usepackage{moresize}
 \usepackage{wasysym}
+\usepackage{tikz}
 
 \usepackage{tabularx}
 
@@ -37,6 +39,9 @@
 
 \begin{document}
 \flushleft\HUGE\pagenumbering{gobble}
+
+%\resizebox{\textwidth}{!}{
+\begin{minipage}[b][18.94cm][t]{24.94cm}
 \begin{minipage}[b][2in][t]{.57\textwidth}
 
   \vspace*{1.8cm}
@@ -50,34 +55,78 @@
 \end{minipage}
 \hfill
 \begin{minipage}[b][2in][t]{.4\textwidth}
-\flushright\fbox{\resizebox{2in}{!}{\hpfamily HP}\rule{1.5in}{0pt}}\\
-\fbox{\resizebox{2in}{!}{\acfamily AC}\rule{1.5in}{0pt}}
+  \flushright\fbox{\resizebox{2in}{!}{\hpfamily HP}\rule{1.5in}{0pt}}\\
+  \fbox{\resizebox{2in}{!}{\acfamily AC}\rule{1.5in}{0pt}}
 \end{minipage}
-
 \vfill
-
-
 \ability{STR}\hfill
 \ability{INT}\hfill
 \ability{WIS}
 
-\vspace{.15in}
+\vspace*{.15in}
 
 \ability{DEX}\hfill
 \ability{CON}\hfill
 \ability{CHA}
-
 \vfill
-
 \savingThrow{Poison or Death Ray}\hfill
 \savingThrow{Magic Wand}\hfill
 \savingThrow{Turn to Stone \\ or Paralysis}\hfill
 \savingThrow{Dragon Breath}\hfill
 \savingThrow{Spells or \\ Magic Staff}
-
 \begin{tabular*}{\textwidth}{|l @{\extracolsep{\fill}} @{\extracolsep{\fill}}|c|c|c|c|c|c|c|c|c|c|c|c|}
   \multicolumn{1}{l}{THAC} & \multicolumn{1}{c}{9} & \multicolumn{1}{c}{8} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{-1} & \multicolumn{1}{c}{-2} \\ \hline
   Roll & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \phantom{M} & \\ \hline
 \end{tabular*}
+\end{minipage}
+%}
 
+\newpage
+
+
+\LARGE
+{
+\renewcommand\arraystretch{1.5}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} @{\extracolsep{\fill}} cclcc}
+  \multicolumn{6}{l}{\Huge Thief Special Abilities} \\%\hline
+  Open Locks & (d\%) &   \rule{1in}{2pt}   & Move Silently & (d\%) &   \rule{1in}{2pt} \\
+  Find Traps & (d\%) &   \rule{1in}{2pt}   & Hide in Shadows & (d\%) &   \rule{1in}{2pt} \\
+  Remove Traps & (d\%) &   \rule{1in}{2pt} & Pick Pockets & (d\%) &   \rule{1in}{2pt}  \\
+  Climb Walls & (d\%) &   \rule{1in}{2pt}  & Hear Noise & (1d6) &   \rule{1in}{2pt} 
+\end{tabular*}}
+
+\rule{\textwidth}{2pt}
+\Huge Demihuman Special Abilities\\
+\Large
+
+
+\begin{multicols}{3}
+  $\square$~Infravision \\
+  $\square$~Languages \\
+  $\square$~Immune to paralysis from ghouls\\
+  $\square$~Detect Secret Doors (1d6): 1-2 \\
+  $\square$~Hide in woodlands(d\%): 90\%\\
+  $\square$~Hide in shadows (1d6): 1-2
+\end{multicols} \rule{\textwidth}{2pt}
+\Huge Cleric Turning Undead \\ 
+(2d6): \hfill \Large
+  \fbox{\begin{minipage}{1in}\centering Skeleton \\ \rule{0pt}{.5in} \end{minipage}} \hfill
+  \fbox{\begin{minipage}{1in}\centering Zombie   \\ \rule{0pt}{.5in} \end{minipage}} \hfill
+  \fbox{\begin{minipage}{1in}\centering Ghoul    \\ \rule{0pt}{.5in} \end{minipage}} \hfill
+  \fbox{\begin{minipage}{1in}\centering Wight    \\ \rule{0pt}{.5in} \end{minipage}}
+
+
+
+  
+
+  
+
+  \rule{\textwidth}{2pt}
+  \Huge
+  Number of Spells per Level
+
+
+  \vfill
+
+  
 \end{document}
